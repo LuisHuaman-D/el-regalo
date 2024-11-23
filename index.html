@@ -4,6 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Regalo Perfecto</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        body {
+            background: rgb(250, 250, 250);
+            font-family: Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 5px 0px;
+        }
+        p {
+            margin:5px 0px;
+        }
+        button {
+            background: rgb(0, 204, 17);
+            padding: 10px;
+            border-radius: 10px;
+            border:none;
+            margin: 10px 0px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: center;
+        }
+        nav img {
+            width: 70px;
+        }
+        ul {
+            display: flex;
+            gap: 20px;
+        }
+        ul li {
+            list-style: none;
+        }
+
+        .cont-slider{
+            display: flex;
+            justify-content: space-between;
+            background-color: aquamarine;
+            padding: 0px 40px;
+            align-items: center;
+            margin: 0px;
+        }
+        .cont-slider img {
+            width: 600px;
+            padding:0px ;
+            margin: 0px;
+        }
+
+        .products-list{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .products-list > div {
+            width: 250px;
+        }
+        .products-list > div > img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+
+
 </head>
 <body>
     <!--menu de navegación-->
@@ -20,7 +94,7 @@
     </header>
     <main>
         <!--sección de slider-->
-        <section>
+        <section class="cont-slider">
             <div>
                 <span>CELULAR ULTIMO MODELO</span>
                 <h1>EL REGALO PERFECTO</h1>
@@ -49,7 +123,7 @@
         <section>
             <h2>PRODUCTOS DESTACADOS</h2>
             <!--contenedor de mi lista de items de productos-->
-            <div>
+            <div class="products-list">
                 <!--item 1-->
                 <div>
                     <img src="./img/xiaomi 11.webp" alt="">
