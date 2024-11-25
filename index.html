@@ -7,15 +7,16 @@
     <style>
         * {
             margin: 0px;
+            padding: 0px;
         }
         body {
-            background: rgb(250, 250, 250);
+            background: rgb(248, 248, 248);
             font-family: Verdana, sans-serif;
             box-sizing: border-box;
         }
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
         }
 
         h1 {
@@ -48,32 +49,91 @@
         ul li {
             list-style: none;
         }
-
+        .container{
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+     }
+        .marcas{
+            padding: 60px 0px;
+        }
         .cont-slider{
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             background-color: aquamarine;
             padding: 0px 40px;
             align-items: center;
             margin: 0px;
         }
         .cont-slider img {
-            width: 600px;
+            max-width: 600px;
             padding:0px ;
             margin: 0px;
         }
-
+        .list-marcas{
+            flex-wrap: wrap;
+            box-sizing: content-box;
+        }
+        .list-marcas ul{
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .list-marcas ul li{
+            border: 1px solid ;
+            border-radius: 20px;
+            padding: 6px 15px;
+            display: flex;
+            justify-items:space-between;
+        }
+        .section-titulo {
+            padding-bottom: 30px;
+        }
         .products-list{
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
         .products-list > div {
-            width: 250px;
-        }
-        .products-list > div > img {
             width: 300px;
-            height: auto;
+            display: flex;
+          flex-direction: column;
+            background-color: #fff;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            
+        }
+
+        .products-list div .img-producto {
+            width: 100%;
+            height: 280px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .products-list div .img-producto img {
+            object-fit: contain;
+        }
+        .products-list div .texto-productos {
+            padding:10px;
+        }
+        .products-list div button {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .texto-productos h2 {
+            font-size: 16px;
+        }
+        span.dtlles-tecnico {
+        font-size: 12px;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 10px 0px;
+            align-content: center;
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 
@@ -108,70 +168,102 @@
 
         <!--sección de marcas-->
         <section>
-            <div>
+            <div class="container marcas">
+            <div class="list-marcas">
                 <ul>
-                    <li>LOGO</li>
-                    <li>LOGO</li>
-                    <li>LOGO</li>
-                    <li>LOGO</li>
-                    <li>LOGO</li>
+                    <li>SAMSUNG</li>
+                    <li>XIAOMI</li>
+                    <li>REDMI </li>
+                    <li>LG</li>
+                    <li>APPLE</li>
+                    <li>HUAWEI</li>
+                    <li>HONOR</li>
+                    <li>OPPO</li>
+                    
                 </ul>
             </div>
+        </div>
         </section>
 
         <!--Productos destacados-->
         <section>
-            <h2>PRODUCTOS DESTACADOS</h2>
+            <div class="container">
+            <h2 class="section-titulo">PRODUCTOS DESTACADOS</h2>
             <!--contenedor de mi lista de items de productos-->
             <div class="products-list">
                 <!--item 1-->
                 <div>
-                    <img src="./img/xiaomi 11.webp" alt="">
-                    <span>camara: 200px</span>
-                    <h2>Producto 01</h2>
-                    <span>s/ 1999</span>
+                    <div class="img-producto">
+                    <img src="./img/samsung a51.webp" alt="">
+                    </div>
+                    <div class="texto-productos">
+                    <span class="dtlles-tecnico">camara: 200px</span>
+                    <h2>Samsung A15</h2>
+                    <span class="precio-produc">s/ 1999</span>
+                    </div>  
                     <button>Añadir al carrito</button>
-                </div>  
+                </div> 
 
                  <!--item 2-->
                  <div>
-                    <img src="./img/xiaomi 11.webp" alt="">
-                    <span>camara: 200px</span>
-                    <h2>Producto 01</h2>
-                    <span>s/ 1999</span>
+                    <div class="img-producto">
+                        <img src="./img/xiaomi 11.webp" alt="">
+                    </div>
+                    <div class="texto-productos">
+                        <span class="dtlles-tecnico">camara: 200px</span>
+                        <h2>Redmi Note 11</h2>
+                        <span class="precio-produc">s/ 1999</span>
+                    </div>
                     <button>Añadir al carrito</button>
                 </div>  
                 
                 <!--item 3-->
                 <div>
-                    <img src="./img/xiaomi 11.webp" alt="">
-                    <span>camara: 200px</span>
+                    <div class="img-producto">
+                    <img src="./img/samsung s24.jpg" alt="">
+                    </div>
+                    <div class="texto-productos">
+                    <span class="dtlles-tecnico">camara: 200px</span>
                     <h2>Producto 01</h2>
-                    <span>s/ 1999</span>
+                    <span class="precio-produc">s/ 1999</span>
+                    </div>
                     <button>Añadir al carrito</button>
                 </div>  
 
                 <!--item 4-->
                 <div>
-                    <img src="./img/xiaomi 11.webp" alt="">
-                    <span>camara: 200px</span>
+                    <div class="img-producto">
+                    <img src="./img/samsung a51.webp" alt="">
+                    </div>
+                    <div class="texto-productos">
+                    <span class="dtlles-tecnico">camara: 200px</span>
                     <h2>Producto 01</h2>
-                    <span>s/ 1999</span>
+                    <span class="precio-produc">s/ 1999</span>
+                     </div>
                     <button>Añadir al carrito</button>
                 </div>  
 
                  <!--item 5-->
                  <div>
-                    <img src="./img/xiaomi 11.webp" alt="">
-                    <span>camara: 200px</span>
+                    <div class="img-producto">
+                    <img src="./img/samsung s24.jpg" alt="">
+                    </div>
+                    <div class="texto-productos">
+                    <span class="dtlles-tecnico">camara: 200px</span>
                     <h2>Producto 01</h2>
-                    <span>s/ 1999</span>
+                    <span class="precio-produc">s/ 1999</span>
+                    </div>
                     <button>Añadir al carrito</button>
                 </div>  
 
             </div>
+        </div>
         </section>
 
     </main>
+
+    <footer>
+        Todos Los Derechos Reservados @2024
+    </footer>
 </body>
 </html>
