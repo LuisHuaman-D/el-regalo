@@ -83,7 +83,7 @@ function generarColorAleatorio() {
     
             if (isNaN(jugador) || jugador < 1 || jugador > 3) {
                 alert("Debes elegir un número entre 1 y 3.");
-                continue;
+                return;
             }
     
             alert("Tu eliges: " + eleccion(jugador));
