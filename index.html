@@ -26,12 +26,15 @@
         p {
             margin:5px 0px;
         }
-        button {
+        .btn-style {
             background: rgb(0, 204, 17);
             padding: 10px;
             border-radius: 10px;
             border:none;
             margin: 10px 0px;
+            text-decoration: none;
+            font-size: 14px;
+            
         }
         nav{
             display: flex;
@@ -184,11 +187,14 @@
                 <span>CELULAR ULTIMO MODELO</span>
                 <h1>EL REGALO PERFECTO</h1>
                 <p>Por fiestas navideñas aprovecha las promociones que tenemos</p>
-                <button>Ver promociones</button>
+                <button class="btn-style">Ver promociones</button>
+                <a class="btn-style" href="./interactivo.html">Quiero interactuar</a>
             </div>
             <div>
                 <img src="./img/rb_28493.png" alt="">
             </div>
+        
+
         </section>
 
         <!--sección de marcas-->
@@ -215,6 +221,7 @@
             <div class="container">
             <h2 class="section-titulo">PRODUCTOS DESTACADOS PARA TI 
             </h2>
+        
             <!--contenedor de mi lista de items de productos-->
             <div class="products-list">
                 <!--item 1-->
@@ -291,79 +298,6 @@
     <footer>
         Todos Los Derechos Reservados @2024
     </footer>
-            <script>
-                // creo mi variable y busco la clase
-                const cerrarBanner = document.querySelector(".banner-cerrar")
-                const topBanner = document.getElementById("top-banner-header")
-                cerrarBanner.addEventListener("click", function(){
-                    topBanner.style.display = "none";
-                });
-            </script>
 
-            <script>
-                //busco el elemento id 
-                    const cambiarFondo = document.getElementById("input-color");
-                    cambiarFondo.addEventListener("input", function () {
-                        //document.top-header.style.backgroundColor = cambiarFondo.value;
-                        document.querySelector(".top-header").style.background = cambiarFondo.value
-                    });
-            </script>
-
-            <script>
-                // Función para cargar y mostrar el nombre almacenado en Session Storage
-                function cargarNombre() {
-                    let nombreGuardado = sessionStorage.getItem('nombreDeUsuario');
-
-                    // Si no hay nombre, pedirlo al usuario
-                    if (!nombreGuardado) {
-                        const nuevoNombre = prompt("Bienvenido, ¿Cuál es tu nombre?");
-                        if (nuevoNombre) {
-                            sessionStorage.setItem('nombreDeUsuario', nuevoNombre);
-                            nombreGuardado = nuevoNombre;
-                        } else {
-                            nombreGuardado = 'Invitado';
-                        }
-                    }
-                    // Mostrar el nombre en el span
-                    document.getElementById('nombreUsuario').textContent = nombreGuardado;
-                }
-
-                // Función para editar el nombre
-                function editarNombre() {
-                    const nuevoNombre = prompt("¿Cuál es tu nuevo nombre?");
-                    if (nuevoNombre) {
-                        sessionStorage.setItem('nombreDeUsuario', nuevoNombre);
-                        cargarNombre(); // Actualizar el nombre en el DOM
-                    }
-                }
-
-                // Cargar el nombre al iniciar la página
-                cargarNombre();
-
-                // Agregar evento click al ícono de edición
-                document.getElementById('editarUsuario').addEventListener('click', editarNombre);
-            </script>
-
-
-
-    <script>
-        const edad = prompt("Ingresa la edad");
-        const edadNumber = parseInt(edad); // NaN (Not a Number) "10" => 10
-      // crear una condificional para validar que la conversión a number fue existosa
-      // if = si (condicional)
-        if (isNaN(edadNumber) === false) {
-         // ENTONCES LA CONVERSION FUE EXISTOSA
-        // DEBEMOS EVALUAR SI LA EDAD >= 18 ENTONCES LO DEJO PASA SI NO PONGO TODO EN BLANCO
-        if (edadNumber >= 18) {
-          console.log("Es mayor de edad");
-        } else {
-          alert("No tienes permiso para ver al sitio web")
-          document.body.style.display = "none";
-        }
-      } else {
-        // HAGO ALGO PARA MANEJAR EL ERROR
-        alert("El valor ingresado no es un número válido");
-      }
-    </script>
 </body>
 </html>
