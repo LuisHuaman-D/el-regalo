@@ -1,26 +1,69 @@
+/*
 function cambiarColorDeFondo() {
     const bgColor = prompt("Ingrese un color en ingles, hexadecimal o rgb para personalizar el sitio");
     document.body.style.backgroundColor = bgColor;   
 }
 cambiarColorDeFondo();
+*/
+
+//AGREGAR LISTA DE HERMANO ---- INICIO 
+const gameArea= document.getElementById("game-area")
 
 function guardarNombresDeHermanos() {
     const cantidadDeHermanos = parseInt( 
         prompt("Ingrese la cantidad de hermanos")
     );
-    
-    const  nombresDeHermanos = []
-    let contador = 0
+
+    let contador = 0;
+    const listaOrdenada = document.createElement("ol");
+
     while (contador < cantidadDeHermanos){
         //preguntamos el nombre del usuario
         const cantidadDeHermanos = prompt("Ingrese la cantidad de hermanos")
-        nombresDeHermanos.push(cantidadDeHermanos)
+        //nombresDeHermanos.push(cantidadDeHermanos)
+        const listItem = document.createElement("li");
+        listItem.textContent = cantidadDeHermanos
+        
+        listaOrdenada.appendChild(listItem)
         contador++
     }
+    gameArea.innerHTML = "";
     //console.log("Lista de hermanos:", nombresDeHermanos);
-    alert("Lista de hermanos: " + nombresDeHermanos.join(", "));
+    //alert("Lista de hermanos: " + nombresDeHermanos.join(", "));
+    gameArea.appendChild(listaOrdenada)
 }
+//AGREGAR LISTA DE HERMANO ---- FIN
 
+/*
+function generarColorAleatorio() {
+    // Generar un color hexadecimal aleatorio
+    const letras = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letras[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+function generarBloques(){
+    const cantidadBloque = prompt('¿Cuántos bloques deseas generar?');
+
+    let contadorBloque = 0 
+    const listaOrdenada = document.createElement("div");
+    while (contadorBloque < cantidadBloque){
+        //preguntamos el nombre del usuario
+        const cantidadBloque = prompt("Cuántos bloques deseas generar")
+        //nombresDeHermanos.push(cantidadDeHermanos)
+        const listItem = document.createElement("div");
+        listItem.style.backgroundColor = generarColorAleatorio();
+        listItem.textContent = cantidadBloque
+        
+        listaOrdenada.appendChild(listItem)
+        contador++
+    }
+    gameArea.innerHTML = "";
+    gameArea.appendChild(listaOrdenada)
+}
+*/
 
 //código generado por la IA
 function generarColorAleatorio() {
@@ -33,8 +76,8 @@ function generarColorAleatorio() {
     return color;
   }
 
-  function generarBloques() {
-    const container = document.getElementById('container');
+function generarBloques() {
+    const container = document.getElementById('game-area');
     container.innerHTML = ''; // Limpiar contenido previo
 
     const cantidad = prompt('¿Cuántos bloques deseas generar?');
@@ -51,9 +94,8 @@ function generarColorAleatorio() {
     }
   }
 
-
     //función para quitar decimales y generar número aleatorios
-    function aleatorio(min, max) {
+     function aleatorio(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
     
@@ -76,8 +118,9 @@ function generarColorAleatorio() {
         let pc = 0;
         let triunfos = 0;
         let perdidas = 0;
-    
-        while (triunfos < 3 && perdidas < 3) {
+        gameArea.innerHTML = "";
+
+        //while (triunfos < 3 && perdidas < 3) {
             pc = aleatorio(1, 3);
             jugador = parseInt(prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera"), 10);
     
@@ -91,21 +134,37 @@ function generarColorAleatorio() {
     
             // Combate
             if (jugador === pc) {
-                alert("Empate");
+                const texto3 = document.createElement("p")
+                 texto3.textContent = "EMPATE"
+                 texto3.style.color = "orange";
+                 texto3.classList.add('block2');
+                 gameArea.appendChild(texto3)
             } else if (
                 (jugador === 1 && pc === 3) ||
                 (jugador === 2 && pc === 1) ||
                 (jugador === 3 && pc === 2)
             ) {
-                alert("¡GANASTE!");
+               // alert("¡GANASTE!");
+               const texto1 = document.createElement("p")
+               texto1.textContent = "GANASTE"
+               texto1.style.color = "green";
+               texto1.classList.add('block2');
+               gameArea.appendChild(texto1)
                 triunfos++;
             } else {
-                alert("PERDISTE");
+               // alert("PERDISTE");
+                const texto2 = document.createElement("p")
+                 texto2.textContent = "PERDISTE"
+                 texto2.style.color = "red";
+                 texto2.classList.add('block2');
+                 gameArea.appendChild(texto2)
                 perdidas++;
             }
-        }
+       // }
     
-        alert("Ganaste " + triunfos + " veces. Perdiste " + perdidas + " veces.");
+        //alert("Ganaste " + triunfos + " veces. Perdiste " + perdidas + " veces.");
+        
+
     }
             
 

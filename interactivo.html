@@ -4,38 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>interactuar</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            text-align: center;
-        }
-    
-  .block {
-         width: 100px;
-         height: 100px;
-            display: block;
-         margin: 5px;
-    }
-    #container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #fff;
-    }
+
     
     </style>
 </head>
 <body>
+    <main>
 
-    <h1>Página interactiva</h1>
 
+    <section class="cont-titulo">
+     <h1>Página interactiva</h1>
+    </section>
+
+    <section class="cont-btones">
         <button onclick="guardarNombresDeHermanos()" >Hermanos</button>
         <button onclick="generarBloques()">Bloques</button>
         <button onclick ="juegoYanquenpo()">Yanquenpo</button> 
-       
+    </section> 
         <div id="container">
-
         </div>
+    <section class="game-nombres">
+        <div id="game-area">
+        </div>
+    </section>
 
+</main>
     <script src="./app.js"></script>
 </body>
 </html>
