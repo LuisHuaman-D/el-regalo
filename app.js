@@ -1,11 +1,11 @@
-/*
+
 function cambiarColorDeFondo() {
     const bgColor = prompt("Ingrese un color en ingles, hexadecimal o rgb para personalizar el sitio");
     document.body.style.backgroundColor = bgColor;   
 }
 cambiarColorDeFondo();
-*/
 
+/*
 //AGREGAR LISTA DE HERMANO ---- INICIO 
 const gameArea= document.getElementById("game-area")
 
@@ -33,37 +33,8 @@ function guardarNombresDeHermanos() {
     gameArea.appendChild(listaOrdenada)
 }
 //AGREGAR LISTA DE HERMANO ---- FIN
-
-/*
-function generarColorAleatorio() {
-    // Generar un color hexadecimal aleatorio
-    const letras = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letras[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-function generarBloques(){
-    const cantidadBloque = prompt('¿Cuántos bloques deseas generar?');
-
-    let contadorBloque = 0 
-    const listaOrdenada = document.createElement("div");
-    while (contadorBloque < cantidadBloque){
-        //preguntamos el nombre del usuario
-        const cantidadBloque = prompt("Cuántos bloques deseas generar")
-        //nombresDeHermanos.push(cantidadDeHermanos)
-        const listItem = document.createElement("div");
-        listItem.style.backgroundColor = generarColorAleatorio();
-        listItem.textContent = cantidadBloque
-        
-        listaOrdenada.appendChild(listItem)
-        contador++
-    }
-    gameArea.innerHTML = "";
-    gameArea.appendChild(listaOrdenada)
-}
 */
+
 
 //código generado por la IA
 function generarColorAleatorio() {
@@ -167,11 +138,6 @@ function generarBloques() {
 
     }
             
-
-
-
-
-
 
 
 /*
