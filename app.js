@@ -5,7 +5,7 @@ function cambiarColorDeFondo() {
 }
 cambiarColorDeFondo();
 
-/*
+
 //AGREGAR LISTA DE HERMANO ---- INICIO 
 const gameArea= document.getElementById("game-area")
 
@@ -33,7 +33,7 @@ function guardarNombresDeHermanos() {
     gameArea.appendChild(listaOrdenada)
 }
 //AGREGAR LISTA DE HERMANO ---- FIN
-*/
+
 
 
 //código generado por la IA
